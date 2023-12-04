@@ -1,0 +1,53 @@
+RewriteEngine On
+RewriteBase /pweb2/jobsheet5/
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^home/?$ index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^mahasiswa/?$ views/mahasiswa/index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^dosen?$ views/dosen/index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^tambahmhs?$ views/mahasiswa/tambah.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^editmhs(\d+)/?$ views/mahasiswa/edit.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^hapusmhs(\d+)/?$ views/mahasiswa/hapus.php?id=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^editdosen(\d+)/?$ views/dosen/edit.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^hapusdosen(\d+)/?$ views/dosen/hapus.php?id=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^prosestambahmhs/?$ views/mahasiswa/proses_tambah.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^kembaliprosesmhs/?$ views/mahasiswa/index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^tambahdosen/?$ views/dosen/tambah.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^prosestambahdosen/?$ views/dosen/proses_tambah.php?page=$1 [L]
+
+
+
